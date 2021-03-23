@@ -4,11 +4,13 @@ on:
   pull_request:
     branches:
       - master
+      - ci
   check_run:
     types: [rerequested, requested_action]
   push:
     branches:
       - master
+      - ci
   workflow_dispatch:
 env:
   NODE_VERSION: 12.14.1
@@ -63,4 +65,3 @@ jobs:
 
       # - name: Run prettier on JavaScript code
       #   run: npx prettier 'build/**/*.js' --check
-
